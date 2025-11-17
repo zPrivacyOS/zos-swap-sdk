@@ -1,14 +1,7 @@
 const { SwapSDK } = require('../dist/index.js');
 
 // Initialize the SDK
-const sdk = new SwapSDK({
-  baseURL: 'https://your-api-domain.com/api',
-  timeout: 10000,
-});
-
-// Set authentication token
-sdk.setAuthToken('your-jwt-or-privy-token');
-
+const sdk = new SwapSDK();
 async function quickStart() {
   try {
     // Get available currencies
@@ -32,8 +25,8 @@ async function quickStart() {
       fromCurrency: 'zec',
       toCurrency: 'sol',
       amount: 1,
-      recipientAddress: '0x1234567890abcdef', // Your SOL address
-      refundAddress: '0xabcdef1234567890', // Optional: Your ZEC refund address
+      recipientAddress: '', // Your SOL address
+      refundAddress: '', // Optional: Your ZEC refund address
     };
 
     const createResult = await sdk.createExchange(exchangeData);
