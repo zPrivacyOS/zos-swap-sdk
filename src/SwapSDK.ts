@@ -38,7 +38,7 @@ export class SwapSDK {
    */
   constructor(options: SwapSDKOptions = {}) {
     const {
-      baseURL = 'http://localhost:3001/api',
+      baseURL = 'https://zos.computer/',
       timeout = 10000,
       headers = {},
     } = options;
