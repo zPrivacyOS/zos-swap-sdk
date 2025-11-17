@@ -22,16 +22,7 @@ yarn add zos-swap-sdk
 import { SwapSDK } from 'zos-swap-sdk';
 
 // Initialize the SDK
-const sdk = new SwapSDK({
-  baseURL: 'https://your-api-domain.com/api', // Optional, defaults to http://localhost:3001/api
-  timeout: 10000, // Optional, request timeout in milliseconds
-  headers: {
-    // Optional additional headers
-  }
-});
-
-// Set authentication token (required for most operations)
-sdk.setAuthToken('your-jwt-or-privy-token');
+const sdk = new SwapSDK();
 ```
 
 ### Available Currencies
@@ -190,28 +181,6 @@ try {
   }
 }
 ```
-
-### Authentication
-
-The SDK supports two types of authentication tokens:
-
-1. **JWT Tokens**: Standard JSON Web Tokens
-2. **Privy Tokens**: Base64 encoded tokens from Privy authentication
-
-```typescript
-// Set JWT token
-sdk.setAuthToken('your-jwt-token');
-
-// Set Privy token
-sdk.setAuthToken('your-base64-encoded-privy-token');
-
-// Clear token
-sdk.clearAuthToken();
-
-// Get current token
-const currentToken = sdk.getAuthToken();
-```
-
 ## Types
 
 The SDK provides TypeScript types for all API responses:
