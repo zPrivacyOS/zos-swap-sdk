@@ -2,10 +2,7 @@ import { SwapSDK, SwapAPIError } from '../src';
 
 async function basicUsageExample() {
   // Initialize the SDK
-  const sdk = new SwapSDK({
-    baseURL: 'https://your-api-domain.com/api',
-    timeout: 10000,
-  });
+  const sdk = new SwapSDK();
 
   // Set authentication token
   sdk.setAuthToken('your-jwt-or-privy-token');
