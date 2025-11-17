@@ -4,9 +4,6 @@ async function basicUsageExample() {
   // Initialize the SDK
   const sdk = new SwapSDK();
 
-  // Set authentication token
-  sdk.setAuthToken('your-jwt-or-privy-token');
-
   try {
     // Get available currencies
     console.log('Fetching available currencies...');
